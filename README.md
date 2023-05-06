@@ -1,3 +1,3 @@
 # NyylaeNetwork
-huutista
-testi
+
+npm start to run
