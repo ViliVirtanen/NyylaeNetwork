@@ -1,15 +1,9 @@
 import Image from "next/image";
-import { Varela } from "next/font/google";
-import Link from "next/link";
-import { useState } from "react";
-import { Registration } from "@/types";
 import { RegisterForm } from "@/components/RegisterForm";
-
-const inter = Varela({ weight: "400", subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={`${inter.className}`}>
+    <main>
       <div className="min-h-screen flex justify-center items-center flex-col">
         <div className="glitch-wrapper">
           <div className="glitch" data-glitch="NYYLÄ NETWORK">
@@ -40,7 +34,7 @@ export default function Home() {
               fill
               alt="Nyylä Network"
               style={{ objectFit: "cover" }}
-              src="/kuva1.jpg"
+              src="./kuva1.jpg"
             />
           </div>
         </div>
