@@ -53,7 +53,7 @@ export const RegisterForm = () => {
               Liity mukaan
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
-              Liity mukaan Nyylä Networkiin ja ota askel kohti Nyylien
+              Liity mukaan Nyylä Networkkiin ja ota askel kohti Nyylien
               maailmanlaajuista yhteisöä.
             </p>
           </div>

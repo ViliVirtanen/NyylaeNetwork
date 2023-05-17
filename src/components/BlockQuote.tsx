@@ -30,7 +30,7 @@ export const BlockQuote = ({
     return (
       <blockquote className="otro-blockquote max-sm:w-5/6 sm:w-4/6">
         {text}
-        <span>{creator}</span>
+        <span>~ {creator}</span>
       </blockquote>
     );
   };
