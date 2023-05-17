@@ -21,7 +21,7 @@ export default function Home() {
       <Welcome />
       <BlockQuote
         side="left"
-        creator="Lassi"
+        creator="Professional Nyylä, Lassi"
         image="./lassi.jpeg"
         text="Löysin Nyylä Networkin täysin vahingossa, mutta se oli yksi parhaimmista
         sattumista elämässäni. Selaillessani internetiä eräänä iltana, törmäsin
