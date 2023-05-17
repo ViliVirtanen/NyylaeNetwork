@@ -1,70 +1,35 @@
-import Image from "next/image";
-import { RegisterForm } from "@/components/RegisterForm";
+import { useEffect, useState } from "react";
+import Home from "@/components/Home";
+import Ilmottautuneet from "./ilmottautuneet";
+import Kommentit from "./kommentit";
+import { Header } from "@/components/Header";
 
-export default function Home() {
+export default function Index() {
+  const [page, setPage] = useState<string>("koti");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    if (page === "koti#register") {
+      setPage("koti");
+      setTimeout(() => {
+        const section = document.querySelector("#register");
+        section &&
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    }
+  }, [page]);
+
   return (
     <main>
-      <div className="min-h-screen flex justify-center items-center flex-col">
-        <div className="glitch-wrapper">
-          <div className="glitch" data-glitch="NYYLÄ NETWORK">
-            NYYLÄ NETWORK
-          </div>
-        </div>
-        <p>Connecting Nyyläs all around the globe</p>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h2 className="mb-20">Tervetuloa</h2>
-        <p>
-          Nyylä Network on ainutlaatuinen verkosto, joka on suunniteltu
-          yhdistämään Nyyliä ympäri maailmaa. Missiomme on luoda vahva yhteisö,
-          joka kokoaa yhteen kaikki Nyylät, oli kyseessä sitten kokenut konkari
-          tai vasta-alkaja nyyläilyssä. Uskomme, että jokaisella Nyylällä on
-          lahjoja ja taitoja, jotka ansaitsevat tulla jaetuiksi
-          maailmanlaajuisesti.
-        </p>
-      </div>
-      <div className="my-20 flex flex-row items-center">
-        <div className="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
-          <div
-            className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
-            style={{ width: "300px", height: "300px", position: "relative" }}
-          >
-            <Image
-              fill
-              alt="Nyylä Network"
-              style={{ objectFit: "cover" }}
-              src="./kuva1.jpg"
-            />
-          </div>
-        </div>
-        <blockquote className="otro-blockquote">
-          Löysin Nyylä Networkin täysin vahingossa, mutta se oli yksi
-          parhaimmista sattumista elämässäni. Selaillessani internetiä eräänä
-          iltana, törmäsin kiinnostavaan keskustelupalstaan, jossa Nyylät
-          jakoivat luomuksiaan ja ideoitaan. Innostuneena päätin liittyä mukaan
-          ja jakaa omat nyylä-tuotokseni.
-          <span>Lassi</span>
-        </blockquote>
-      </div>
-      <div
-        className="flex flex-col items-center"
-        style={{ width: "100%", marginTop: "3rem" }}
-      >
-        <h2 className="mb-10">Nyyläilyä</h2>
-        <video width="100%" controls poster="placeholder.jpg">
-          <source
-            src="https://users.aalto.fi/~maculue1/video/titeenit.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
-        <p className="text-center mt-5 font-bold">
-          Esimerkki siitä, mitä Nyylät ovat saaneet aikaan
-        </p>
-      </div>
-      <div className="my-20">
-        <RegisterForm />
+      <Header setPage={setPage} />
+      <div className="flex min-h-screen flex-col items-center justify-between max-w-5xl mx-auto px-4">
+        {
+          {
+            koti: <Home />,
+            ilmottautuneet: <Ilmottautuneet />,
+            kommentit: <Kommentit />,
+          }[page]
+        }
       </div>
     </main>
   );

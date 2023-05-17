@@ -45,6 +45,7 @@ h3{
 
 .link{
   color: #1a202c;
+  cursor: pointer;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.25rem;
@@ -86,7 +87,6 @@ h3{
 
 .glitch {
   position: relative;
-  font-size: 80px;
   font-weight: 700;
   line-height: 1.2;
   color: #343434;
@@ -333,7 +333,6 @@ h3{
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
 .otro-blockquote{
   font-size: 1.4em;
-  width:60%;
   margin:50px auto;
   font-family:Open Sans;
   font-style:italic;
@@ -366,3 +365,69 @@ h3{
   font-weight: bold;
   margin-top:1em;
 }
+
+.pulse:hover {
+   cursor: pointer;
+   -webkit-animation-name: pulse;
+   animation-name: pulse;
+   -webkit-animation-duration: 1s;
+   animation-duration: 1s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+   }
+   @-webkit-keyframes pulse {
+   0% {
+   -webkit-transform: scale3d(1, 1, 1);
+   transform: scale3d(1, 1, 1);
+   }
+   50% {
+   -webkit-transform: scale3d(1.05, 1.05, 1.05);
+   transform: scale3d(1.05, 1.05, 1.05);
+   }
+   100% {
+   -webkit-transform: scale3d(1, 1, 1);
+   transform: scale3d(1, 1, 1);
+   }
+   }
+   @keyframes pulse {
+   0% {
+   -webkit-transform: scale3d(1, 1, 1);
+   transform: scale3d(1, 1, 1);
+   }
+   50% {
+   -webkit-transform: scale3d(1.05, 1.05, 1.05);
+   transform: scale3d(1.05, 1.05, 1.05);
+   }
+   100% {
+   -webkit-transform: scale3d(1, 1, 1);
+   transform: scale3d(1, 1, 1);
+   }
+   } 
+
+
+
+aside {
+   background-color: white;
+   width: 80%;
+   height: 100%;
+   position: fixed;
+   z-index: 100;
+ }
+ 
+ .container {
+   margin: 4.5rem 1.4rem;
+ }
+ 
+ .btn-container {
+   position: fixed;
+ }
+ 
+ .container a {
+   color: rgb(99 102 241);
+   text-decoration: none;
+   font-size: 1.75rem;
+   font-weight: 600;
+   display: block;
+   margin: 20px;
+ }
+ 
