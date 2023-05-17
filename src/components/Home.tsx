@@ -18,12 +18,11 @@ export default function Home() {
         </div>
         <p>Connecting Nyyläs all around the globe</p>
       </div>
-
       <Welcome />
       <BlockQuote
         side="left"
         creator="Lassi"
-        image="./kuva1.jpg"
+        image="./lassi.jpeg"
         text=" Löysin Nyylä Networkin täysin vahingossa, mutta se oli yksi parhaimmista
         sattumista elämässäni. Selaillessani internetiä eräänä iltana, törmäsin
         kiinnostavaan keskustelupalstaan, jossa Nyylät jakoivat luomuksiaan ja
