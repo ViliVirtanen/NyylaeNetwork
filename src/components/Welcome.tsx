@@ -28,10 +28,10 @@ export const Welcome = () => {
         <p className="max-sm:text-1xl sm:text-2xl text-center max-sm:p-10">
           Nyylä Network on ainutlaatuinen verkosto, joka on suunniteltu
           keräämään Nyylät yhteen ympäri maailmaa. Missiomme on luoda vahva
-          yhteisö, joka kokoaa yhteen kaikki Nyylät, oli kyseessä sitten kokenut
-          konkari tai vasta-alkaja nyyläilyssä. Uskomme, että jokaisella
-          Nyylällä on lahjoja ja taitoja, jotka ansaitsevat tulla jaetuiksi
-          maailmanlaajuisesti.
+          yhteisö, joka kokoaa yhteen kaikki maailman Nyylät, oli kyseessä
+          sitten kokenut konkari tai vasta-alkaja nyyläilyssä. Uskomme, että
+          jokaisella Nyylällä on lahjoja ja taitoja, jotka ansaitsevat tulla
+          jaetuiksi maailmanlaajuisesti.
         </p>
       </div>
     </motion.div>

@@ -23,7 +23,7 @@ export default function Home() {
         side="left"
         creator="Lassi"
         image="./lassi.jpeg"
-        text=" Löysin Nyylä Networkin täysin vahingossa, mutta se oli yksi parhaimmista
+        text="Löysin Nyylä Networkin täysin vahingossa, mutta se oli yksi parhaimmista
         sattumista elämässäni. Selaillessani internetiä eräänä iltana, törmäsin
         kiinnostavaan keskustelupalstaan, jossa Nyylät jakoivat luomuksiaan ja
         ideoitaan. Innostuneena päätin liittyä mukaan ja jakaa omat
