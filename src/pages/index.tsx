@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Home from "@/components/Home";
-import Ilmottautuneet from "./ilmottautuneet";
+import Ilmoittautuneet from "./ilmoittautuneet";
 import Kommentit from "./kommentit";
 import { Header } from "@/components/Header";
 
@@ -26,7 +26,7 @@ export default function Index() {
         {
           {
             koti: <Home />,
-            ilmottautuneet: <Ilmottautuneet />,
+            ilmoittautuneet: <Ilmoittautuneet />,
             kommentit: <Kommentit />,
           }[page]
         }

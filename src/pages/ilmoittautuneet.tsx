@@ -1,7 +1,7 @@
 import { Registration } from "@/types";
 import React, { useEffect, useState } from "react";
 
-const Ilmottautuneet = () => {
+const Ilmoittautuneet = () => {
   const [registered, setRegistered] = useState<Registration[]>([]);
 
   useEffect(() => {
@@ -32,4 +32,4 @@ const Ilmottautuneet = () => {
   )
 };
 
-export default Ilmottautuneet;
+export default Ilmoittautuneet;

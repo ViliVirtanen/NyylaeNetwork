@@ -36,8 +36,8 @@ export const Header = ({ setPage }: { setPage: (page: string) => void }) => {
       <a className="link" onClick={() => changePage("koti")}>
         Koti
       </a>
-      <a className="link" onClick={() => changePage("ilmottautuneet")}>
-        Ilmottautuneet
+      <a className="link" onClick={() => changePage("ilmoittautuneet")}>
+        Ilmoittautuneet
       </a>
       <a className="link" onClick={() => changePage("kommentit")}>
         Kommentit
