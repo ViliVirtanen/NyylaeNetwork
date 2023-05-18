@@ -2,10 +2,15 @@ import { CommentObject } from "@/types";
 import React from "react";
 import { useState } from "react";
 
+/**
+ *  Kommentit sivu
+ *
+ */
 const Kommentit = () => {
   const [user, setUser] = useState<string>("");
   const [cmt, setCmt] = useState<string>("");
-  const [list, setList] = useState<CommentObject[]>([
+  const [myComments, setMyComments] = useState<CommentObject[]>([]);
+  const list = [
     { name: "Jartsa86", comment: "Titeenit oli leffa" },
     { name: "KoneAlfa", comment: "YY KAA KONE YY KAA KONE" },
     {
@@ -29,12 +34,12 @@ const Kommentit = () => {
       comment:
         ">mene Helsinkiin >pieni juna ajelee keskellä katua >luule tulleesi hulluksi >ei enää ikinä Helsinkiin",
     },
-  ]);
+  ];
 
   const addComment = (event: React.FormEvent) => {
     event.preventDefault();
     if (user != "" && cmt != "") {
-      setList(list.concat({ name: user, comment: cmt }));
+      setMyComments(myComments.concat({ name: user, comment: cmt }));
       setUser("");
       setCmt("");
     } else {
@@ -42,6 +47,12 @@ const Kommentit = () => {
         "Muistitko varmasti kirjoittaa oman nimimerkkisi ja jonkin mukavan kommentin? :-)"
       );
     }
+  };
+
+  const removeComment = (index: number) => {
+    const newList = [...myComments];
+    newList.splice(index, 1);
+    setMyComments(newList);
   };
 
   const bg = (i: number) => {
@@ -85,10 +96,21 @@ const Kommentit = () => {
         Kaikki kommentit
       </h4>
       <div className="comments">
-        {list.map((c, i) => (
-          <div key={c.name} style={bg(i)}>
-            <span style={{ fontWeight: "bold" }}>{c.name}: </span>
-            <span> {c.comment}</span>
+        {[...list, ...myComments].map((c, i) => (
+          <div key={c.name} style={bg(i)} className="flex justify-between">
+            <div>
+              <span style={{ fontWeight: "bold" }}>{c.name}: </span>
+              <span> {c.comment}</span>
+            </div>
+
+            {myComments.indexOf(c) !== -1 && (
+              <button
+                className="bg-red-500  hover:bg-red-800 rounded-full px-2 m-2 text-white"
+                onClick={() => removeComment(myComments.indexOf(c))}
+              >
+                poista
+              </button>
+            )}
           </div>
         ))}
       </div>

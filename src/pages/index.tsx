@@ -8,7 +8,9 @@ export default function Index() {
   const [page, setPage] = useState<string>("koti");
 
   useEffect(() => {
+    // Scrollaa sivun ylös kun vaihdetaan sivua
     window.scrollTo(0, 0);
+    //jos ollaan register sivulla, scrollaa register sectioniin
     if (page === "koti#register") {
       setPage("koti");
       setTimeout(() => {
