@@ -4,7 +4,7 @@ Nyylä Network
 
 Devaus
 1. suorita npm install
-2. suorita nmp run dev
+2. suorita npm run dev
 
 Buildaus
 1. suorita npm run build
@@ -15,7 +15,7 @@ Linkki:
 https://users.aalto.fi/~maculue1/
 
 
-Lyhyt kuvaus työstä:
+## Lyhyt kuvaus työstä:
 
 Ryhmämme koostui henkilöistä Lassi Aho, Enoque Maculuba ja Vili Virtanen.
 Kukaan meistä ei ole Viestintä- ja digitaalinen media -kurssilla, joten
@@ -31,4 +31,10 @@ suhteellisen suoraviivainen - sivu per henkilö. Yhteistyö ja kommunikaatio
 oli meille helppoa, sillä tunnemme kaikki entuudestaan, ja GitHub on meille
 kaikille tuttu.
 
-öö joo enok jatka tähä
+
+##  Jatkokehitys
+Hirveästi ei tarvitse tehdä, että Nyylä Network v2 voitaisiin julkaista. Projekti on 
+tehty Next.js:llä sitä varten, että tästä on helppo lähteä jatkokehittämään projektia.
+Next.js alusta tarjoaa kaiken valmiiksi, joten voimme rakentaa backendin samaan projektiin
+ja frontendiin voidaan helposti rakentaa nyylä-portaali. Sitten palvelu voitaisiin laittaa
+esimerkiksi digitaloceaniin pyörimään. 
